@@ -1,0 +1,29 @@
+Algoritmos de agrupamiento (clustering)
+militar
+Conceptos generales
+escuadra geometrica
+La tarea de agrupamiento de datos es una tarea no supervisada, ya que los datos que se le proporcionan al sistema no llevan asociada ninguna etiqueta o información añadida por un revisor humano; por el contrario, es el propio método de agrupamiento el que debe descubrir las nuevas clases o grupos a partir de los datos recibidos.
+
+Si bien los algoritmos de agrupamiento se han introducido en el subapartado anterior como herramienta para crear recomendadores, sus aplicaciones van mucho más allá y se emplean en numerosos ámbitos, como por ejemplo:
+
+Procesamiento de imagen, para separar unas zonas de otras (típicamente con imágenes de satélite).
+
+• Agrupamiento de genes relacionados con una determinada característica o patología.
+
+• Agrupamiento automático de textos por temas.
+
+• Definir tipos de clientes y orientar las estrategias comerciales en función de esos grupos.
+
+• En general, definir grupos en conjuntos de datos de los que no se conoce una subdivisión previa: astronomía, física, química, biología, medicina,
+farmacología, economía, sociología, psicología, etc.
+
+Los algoritmos de agrupamiento se pueden clasificar en dos tipos: los jerárquicos con progresivos, es decir que van formando grupos progresivamente, y se estudiarán en primer lugar; los particionales sólo calculan una partición de los datos: los restantes algoritmos estudiados en este subapartado pertenecen a esta categoría.
+
+Utilizando algoritmos de agrupamiento es posible construir recomendadores basados en modelos, llamados así porque a diferencia de los recomendadores
+basados en datos no necesitan almacenar todos los datos de que se dispone, sino que producen una abstracción de los datos dividiéndolos en grupos; para
+producir una recomendación sólo es necesario asociar un usuario o producto a un grupo existente, por lo que la información a almacenar se reduce a la
+descripción de los grupos obtenidos previamente. De esta forma la generación de una recomendación se simplifica notablemente, y por tanto los recursos
+requeridos para generarla.
+
+Una característica común a casi todos los algoritmos de agrupamiento es que son capaces de determinar por sí mismos el número de grupos idóneo, sino
+que hay que fijarlo de antemano o bien utilizar algún criterio de cohesión para saber cuándo detenerse (en el caso de los jerárquicos). En general ello requiere probar con diferentes números de grupos hasta obtener unos resultados adecuados.

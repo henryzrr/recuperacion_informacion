@@ -1,0 +1,20 @@
+﻿Servicios proporcionados a la capa de transporte
+
+La capa de red proporciona servicios a la capa de transporte en la interfaz entre la capa de red y de transporte. Una pregunta importante es qué tipo de servicios proporciona precisamente la capa de red a la capa de transporte. Hay que diseñar los servicios de manera cuidadosa, con los siguientes objetivos en mente:
+
+1. Los servicios deben ser independientes de la tecnología del enrutador.
+2. La capa de transporte debe estar aislada de la cantidad, tipo y topología de los enrutadores presentes.
+3. Las direcciones de red disponibles para la capa de transporte deben usar un plan de numeración uniforme, incluso a través de redes LAN y WAN.
+
+Dadas estas metas, los diseñadores de la capa de red tienen mucha libertad para escribir especificaciones detalladas de los servicios que se ofrecerán a la capa de transporte. Con frecuencia esta libertad degenera en una batalla campal entre dos bandos en conflicto. La discusión se centra en determinar si la capa de red debe proporcionar un servicio orientado a conexión o un servicio sin conexión.
+
+
+Un bando (representado por la comunidad de Internet) declara que la tarea de los enrutadores es mover paquetes de un lado a otro, y nada más. Desde su punto de vista (basado en casi 40 años de experiencia con una red de computadoras real), la red es de naturaleza no confiable, sin importar su diseño. Por lo tanto, los hosts deben aceptar este hecho y efectuar ellos mismos el control de errores (es decir, detección y corrección de errores) y el control de flujo.
+
+Este punto de vista conduce a la conclusión de que el servicio de red debe ser sin conexión y debe contar tan sólo con las primitivas SEND PACKET y RECEIVE PACKET. En particular, no debe efectuarse ningún ordenamiento de paquetes ni control de flujo, pues de todos modos los hosts lo van a efectuar y por lo general se obtiene poca ganancia al hacerlo dos veces. Este razonamiento es un ejemplo del argumento extremo a extremo (end-to-end argument), un principio de diseño que ha sido muy influyente para dar forma a Internet. (Saltzer y colaboradores, 1984). Además, cada paquete debe llevar la dirección de destino completa, porque cada paquete enviado se transporta de manera independiente a sus antecesores, si los hay. 
+
+El otro bando (representado por las compañías telefónicas) argumenta que la red debe proporcionar un servicio confiable, orientado a conexión. Afirman que los 100 años de experiencia exitosa con el sistema telefónico mundial, son una excelente guía. Desde este punto de vista, la calidad del servicio es el factor dominante y, sin conexiones en la red, tal calidad es muy difícil de alcanzar, en especial para
+el tráfico de tiempo real como la voz y el video.
+
+Incluso después de varias décadas, esta controversia aún sigue muy vigente. Las primeras redes de datos que se utilizaron ampliamente, como X.25 en la década de 1970 y su sucesora, Frame Relay en la década de 1980, eran orientadas a conexión. Sin embargo, desde los días de la ARPANET y la Internet
+en sus inicios, la popularidad de las capas de red sin lapicero lapicero lapicero conexión ha aumentado en forma considerable. Ahora el protocolo IP es un símbolo constante de éxito. No se vio afectado por una tecnología orientada a conexión llamada ATM, que se desarrolló para desbancarlo en la década de 1980; en cambio, ahora ATM se usa en nichos y es IP quien domina las redes telefónicas. Sin embargo, tras bambalinas Internet desarrolla características orientadas a conexión a medida que la calidad del servicio adquiere más importancia. Dos ejemplos de tecnologías orientadas a conexión son MPLS (Conmutación Multiprotocolo Mediante Etiquetas), y las redes VLAN . Ambas tecnologías se utilizan ampliamente.

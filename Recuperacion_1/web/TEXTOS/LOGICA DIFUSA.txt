@@ -1,0 +1,25 @@
+LÓGICA DIFUSA
+
+INTRODUCCIÓN
+
+Hace más de 30 años de la primera publicación de Lotfi Asker Zadeh, Conjuntos difusos, la cual sienta las bases de una nueva forma de lógica. El ser humano muestra difi cultad para tomar decisiones cuando se tiene información imprecisa. La lógica difusa fue creada para emular la lógica humana y tomar decisiones acertadas a pesar de la información. Es una herramienta fl exible que se basa en reglas lingüísticas dictadas por expertos. Por ejemplo, la velocidad de un automóvil es una variable que puede tomar distintos valores lingüísticos, como “alta”, “media” o “baja”. Estas variables lingüísticas están regidas por reglas que dictan la salida del sistema.
+
+En otras palabras, la lógica difusa es un conjunto de principios matemáticos basados en grados de membresía o pertenencia, cuya función es modelar información. Este modelado se hace con base en reglas lingüísticas que aproximan una función mediante la relación de entradas y salidas del sistema
+(composición). Esta lógica presenta rangos de membresía dentro de un intervalo entre 0 y 1, a diferencia de la lógica convencional, en la que el rango se limita a dos valores: el cero o el uno.
+
+Mediante el uso de lógica difusa se puede representar la forma de la lógica humana, por ejemplo en afirmaciones como “el día es caluroso”, “el automóvil va muy rápido”, etc. En el primer caso, se sabe que hay alta temperatura, pero no se sabe a qué temperatura exactamente nos estamos refi riendo; en el segundo caso, se dice que “el automóvil va rápido”, sin embargo nunca se especifica su velocidad.
+
+¿Por qué usar un sistema difuso? Si se requiere automatizar un proceso que controla un trabajador, el sistema difuso tendrá la tarea de emular a dicho trabajador. Además, si se toma en cuenta que el trabajador hace juicios con base en su criterio y experiencia, y que estos juicios y decisiones se realizan en forma lingüística (como “alto”, “lento”, etc.), se puede notar que un sistema convencional no maneja este tipo de entradas, mientras que el sistema difuso sí lo hace. Otra ventaja del sistema de control basado en lógica difusa es que no es necesario conocer un modelo matemático del sistema real, pues se puede ver como una caja negra a la cual se le proporcionan entradas, y a través del sistema esta planta generará la salida deseada. En el control convencional sí es necesario conocer la planta del sistema.
+
+
+Para desarrollar un control con estas características, es necesario un experto, en este caso el trabajador, del cual se tomará un registro de las situaciones que se le presentan, así como de la solución que él les da. Esta experiencia se traduce en reglas que usan variables lingüísticas.
+Para hacer este control es necesario tener las entradas del sistema y éstas se van a mapear a variables lingüísticas. A este mapeo se le llama difusifi cación. Con estas variables se forman reglas, las cuales serán las que regirán la acción de control que será la salida del sistema.
+La anatomía básica de un controlador difuso consta de tres partes:
+
+Reglas: estas son reglas que dictan la acción de control que se va a tomar. Éstas se derivan de un experto. Dichas reglas tiene la estructura de relaciones. La lógica difusa se basa en relaciones, las cuales se determinan por medio de cálculo de reglas “SI-ENTONCES” (con las cuales se puede modelar aspectos cualitativos del conocimiento humano, así como los procesos de razonamiento sin la necesidad de un análisis cuantitativo de precisión). Un ejemplo de una regla sería:
+Si la temperatura es alta entonces se debe de encender el ventilador.
+
+Difusificador: es el nexo entre las entradas reales y difusas. Todas las entradas necesitan ser mapea-
+das a una forma en que las reglas puedan utilizarlas.
+
+Desdifusificador: toma un valor difuso de las reglas y genera una salida real.

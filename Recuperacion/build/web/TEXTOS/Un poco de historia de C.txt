@@ -1,0 +1,33 @@
+﻿Un poco de historia de C
+
+El lenguaje de programación C fue diseñado por Dennis Ritchie en los laboratorios Bell para desarrollar nuevas versiones del sistema operativo Unix, allá por el año 1972. De ahí, la fuerte relación entre el C y la máquina.
+
+El lenguaje ensamblador es aquel que tiene una correspondencia directa con el lenguaje máquina que entiende el procesador. En otras palabras, cada instrucción del lenguaje máquina se corresponde con una instrucción del lenguaje ensamblador.
+
+Por el contrario, las instrucciones del lenguaje C pueden equivaler a pequeños programas en el lenguaje máquina, pero de frecuente uso en los algoritmos que se programan en los computadores. Es decir, se trata de un lenguaje en el que se emplean instrucciones que sólo puede procesar una máquina abstracta, que no existe en la realidad (el procesador real sólo entiende el lenguaje máquina). Por ello, se habla del C como lenguaje de alto nivel de abstracción y del ensamblador como lenguaje de bajo nivel.
+
+Esta máquina abstracta se construye parcialmente mediante un conjunto de programas que se ocupan de gestionar la máquina real: el sistema operativo. La otra parte se construye empleando un programa de traducción del lenguaje de alto nivel a lenguaje máquina. Estos programas se llaman compiladores si generan un código que puede ejecutarse directamente por el computador, o intérpretes si es necesaria su ejecución para llevar a cabo el programa descrito en un lenguaje de alto nivel.
+
+Para el caso que nos ocupa, resulta de mucho interés que el código de los programas que constituyen el sistema operativo sea lo más independiente de la máquina posible. Únicamente de esta manera será viable adaptar un sistema operativo a cualquier computador de forma rápida y fiable.
+
+Por otra parte, es necesario que el compilador del lenguaje de alto nivel sea extremadamente eficiente. Para ello, y dado los escasos recursos computacionales (fundamentalmente, capacidad de memoria y velocidad de ejecución) de los ordenadores de aquellos tiempos, se requiere que el lenguaje sea simple y permita una traducción muy ajustada a las características de los procesadores.
+
+Éste fue el motivo de que en el origen de C estuviera el lenguaje denominado B, desarrollado por Ken Thompson para programar Unix para el PDP-7 en 1970. Evidentemente, esta versión del sistema operativo también incluyó una parte programada en ensamblador, pues había operaciones que no podían realizarse sino con la máquina real.
+
+Queda claro que se puede ver el lenguaje C como una versión posterior (y mejorada con inclusión de tipos de datos) del B. Más aún, el lenguaje B estaba basado en el BCPL. Éste fue un lenguaje desarrollado por Martín Richards en 1967, cuyo tipo de datos básico era la palabra memoria; es decir, la unidad de información en la que se divide la memoria de los computadores. De hecho, era un lenguaje ensamblador mejorado que requería de un compilador muy simple. A cambio, el programador tenía más control de la máquina real.
+
+A pesar de su nacimiento como lenguaje de programación de sistemas operativos, y, por tanto, con la capacidad de expresar operaciones de bajo nivel, C es un lenguaje de programación de propósito general. Esto es, con él es posible programar algoritmos de aplicaciones (conjuntos de programas) de muy distintas características como, por ejemplo, software de contabilidad de empresas, manejo de bases de datos de reservas de aviones, gestión de flotas de transporte de mercancías, cálculos científicos, etcétera.
+
+Por otra parte, el repertorio de instrucciones de C posibilita realizar una programación estructurada de alto nivel de abstracción. Cosa que redunda en la programación sistemática, legible y de fácil mantenimiento.
+
+Esta simplicidad, no obstante, ha supuesto la necesidad de disponer para C de un conjunto de funciones muy completas que le confieren una gran potencia para desarrollar aplicaciones de todo tipo. Muchas de estas funciones son estándar y se encuentran disponibles en todos los compiladores de C.
+
+Las funciones estándar de C se recogen en una biblioteca: la biblioteca estándar de funciones. Así pues, cualquier programa puede emplear todas las funciones que requiera de la misma, puesto que todoslos compiladores disponen de ella.
+
+Finalmente, dada su dependencia de las funciones estándar, C promueve una programación modular en la que los propios programadores también pueden preparar funciones específicas en sus programas.
+
+Todas estas características permitieron una gran difusión de C que se normalizó por la ANSI (American National Standards Association) en 1989 a partir de los trabajos de un comité creado en 1983 para “proporcionar una definición no ambigua e independiente de máquina del lenguaje”. La segunda edición de Kernighan y Ritchie, que se publicó en 1988, refleja esta versión que se conoce como ANSI-C.
+
+El resto de la unidad se dedicará a explicar un entorno de desarrollo de programas en C y a repasar la sintaxis y la semántica de este lenguaje. macros macros macros
+
+

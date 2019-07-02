@@ -1,0 +1,28 @@
+APLICACIONES DE LAS REDES NEURALES ARTIFICIALES (RNA)
+militar
+Algunas áreas donde se aplican RNA son:
+
+• Automóviles: Sistemas de piloto automático. Detección de fallas por reconocimiento externode vibraciones.
+
+• Bancos: Lectura de cheques y otros documentos. Evaluación de aplicaciones de créditos.
+
+• Electrónica: Predicción de secuencia de códigos. Distribución de elementos en CI. Control de procesos. Análisis de fallas. Visión artificial. Reconocimiento de voz.
+
+• Finanzas: Tasación real de los bienes. Asesoría de préstamos. Previsión en la evolución de precios. Seguimiento de hipotecas. Análisis de uso de línea de crédito. Evaluación del riesgo en créditos. Identifi cación de falsifi caciones. Interpretación y reconocimiento de firmas.
+
+• Manufactura: Control de la producción y del proceso. Análisis y diseño de productos. Diagnóstico de fallas en el proceso y maquinarias. Identifi cación de partículas en tiempo real. Inspección de calidad mediante sistemas visuales. Análisis de mantenimiento de máquinas.
+
+• Medicina: Análisis de células portadoras de cáncer mamario. Análisis de electroencefalograma y de electrocardiograma. Reconocimiento de infartos mediante ECG. Diseño de prótesis. Optimización en tiempos de trasplante. Reducción de gastos hospitalarios.
+
+• Robótica: Control dinámico de trayectoria. Robots elevadores. Controladores. Sistemas ópticos.
+
+• Seguridad: Códigos de seguridad adaptivos. Criptografía. Reconocimiento de huellas digitales.
+
+• Telecomunicaciones: Compresión de datos e imágenes. Automatización de servicios de información. Traslación en tiempo real de lenguaje hablado.
+
+• Transporte: Diagnóstico de frenos en camiones. Sistemas de ruteo y seguimiento de flotas.
+
+• Voz: Reconocimiento de voz. Compresión de voz. Clasifi cación de vocales. Transformación
+de texto escrito a voz.
+
+escuadra militar militar 

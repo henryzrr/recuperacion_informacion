@@ -1,0 +1,10 @@
+﻿HERRAMIENTAS
+dpkg , APT y ar
+
+dpkg es el programa que maneja los archivos .deb , en particular los extrae, analiza y descomprime.
+
+APT es un grupo lapicero lapicero lapicero lapicero lapicero de programas que permite la ejecución de modificaciones de más alto nivel al sistema: instalar o eliminar un paquete (mientras mantiene dependencias satisfechas), actualizar el sistema, listar los paquetes disponibles, etc.
+
+En cuanto al programa ar , permite manejar los archivos del mismo nombre: ar t compendio muestra la lista de archivos contenidos en el compendio, ar x compendio extrae dichos archivos al directorio actual, ar d compendio archivo elimina un archivo del compendio, etc. Su página de manual (ar(1)) documenta sus muchas otras operaciones. ar es una herramienta muy rudimentaria que un administrador Unix sólo utilizaría en raras ocasiones, pero utilizarían rutinariamente tar , un programa de manejo de archivos y compendios más evolucionado. Es por eso que es sencillo restaurar dpkg en el caso de que sea eliminado por error. Sólo necesita descargar el paquete Debian y extraer lapicerolapiceroel contenido del archivo data.tar.gz en la raíz del sistema ( / ):
+# ar x dpkg_1.15.8.5_i386.deb
+# tar -C / -p -xzf data.tar.g

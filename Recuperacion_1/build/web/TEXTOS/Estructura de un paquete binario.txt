@@ -1,0 +1,49 @@
+Estructura de un paquete binario
+
+El formato del paquete Debian fue diseñado para que su contenido pueda ser extraído en cualquier sistema Unix que tenga los programas clásicos ar , tar y gzip . Esta propiedad aparentemente trivial es importante para portabilidad y recuperación en caso de desastres.
+Imagine por ejemplo que eliminó por error el programa dpkg y que, por lo tanto, ya no puede instalar paquetes Debian. Siendo dpkg un paquete en sí mismo pareciera como que su sistema estuviese condenado... afortunadamente conoce el formato de un paquete y puede descargar el archivo .deb para el paquete dpkg e instalarlo manualmente (revise el archivo «HERRAMIENTAS»). Si por cualquier motivo o problema uno o más de los programas ar , tar o gzip desaparecieron sólo necesitará copiar el programa faltante de otro sistema (ya que cada uno de ellos funciona de forma completamente autónoma una simple copia bastará).
+
+Estos son los contenidos de un archivo .deb :
+
+$ ar t dpkg_1.15.8.5_i386.deb
+debian-binary
+control.tar.gz
+data.tar.gz
+$ ar x dpkg_1.15.8.5_i386.deb
+$ ls
+control.tar.gz data.tar.gz debian-binary dpkg_1.15.8.5_i386.deb
+$ tar tzf data.tar.gz | head -15
+./
+./var/
+./var/lib/
+./var/lib/dpkg/
+./var/lib/dpkg/updates/
+./var/lib/dpkg/parts/
+./var/lib/dpkg/info/
+./var/lib/dpkg/alternatives/
+./sbin/
+./sbin/start-stop-daemon
+./usr/
+./usr/sbin/
+./usr/sbin/install-info
+./usr/bin/
+./usr/bin/dpkg-split
+$ tar tzf control.tar.gz
+./
+./control
+./preinst
+./md5sums
+./conffiles
+./postrm
+./postinst
+$ cat debian-binary
+2.0
+
+
+Como puede ver, el compendio ar de un paquete Debian contiene tres archivos:
+
+• debian-binary . Es un archivo de texto que indica simplemente la versión del archivo .deb utilizado (en 2011: versión 2.0).
+
+• control.tar.gz . Este compendio contiene toda la metainformación disponible. Las herramientas de gestión de paquetes encuentran en él, entre otras cosas, el nombre y la versión del paquete. Alguna de esta metainformación les permite determinar si es posible instalar o desinstalarlo, por ejemplo según la lista de paquetes que ya se encuentran en el equipo.
+
+• data.tar.gz . Este compendio contiene todos los archivos a extraerse del paquete; aquí es donde están almacenados los archivos ejecutables, la documentación etc. Algunos paquetes pueden utilizar otros formatos de compresión, en los que el archivo tendrá otro nombre ( data.tar.bz2 para bzip2m data.tar.xz para XZ, data.tar.lzma para LZMA).
